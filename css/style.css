@@ -8,7 +8,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background: #fff;
     padding-right: 0 !important;
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     text-align: center;
 }
 
@@ -17,7 +17,7 @@ html {
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Open Sans', sans-serif !important;
+    /*font-family: 'Open Sans', sans-serif !important;*/
 }
 
 *::selection {
@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5 {
 }
 
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -38,14 +38,14 @@ h1, h2, h3, h4, h5 {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: -webkit-linear-gradient(to top rgb(19, 109, 74), rgb(8, 39, 27));
-    background: linear-gradient(to top, rgb(19, 109, 74), rgb(8, 39, 27));
+    background: -webkit-linear-gradient(to top rgb(19, 109, 74), rgb(19, 109, 74));
+    background: linear-gradient(to top, rgb(19, 109, 74), rgb(19, 109, 74));
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: -webkit-linear-gradient(to bottom rgb(19, 109, 74), rgb(8, 39, 27));
-    background: linear-gradient(to bottom, rgb(19, 109, 74), rgb(8, 39, 27));
+    background: -webkit-linear-gradient(to bottom rgb(19, 109, 74), rgb(19, 109, 74));
+    background: linear-gradient(to bottom, rgb(19, 109, 74), rgb(19, 109, 74));
     transition-delay: 1s !important;
     cursor: pointer !important;
 }
