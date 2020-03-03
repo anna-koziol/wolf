@@ -38,7 +38,6 @@ h1, h2, h3, h4, h5 {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #FFC371;
     background: -webkit-linear-gradient(to top rgb(19, 109, 74), rgb(8, 39, 27));
     background: linear-gradient(to top, rgb(19, 109, 74), rgb(8, 39, 27));
     border-radius: 10px;
@@ -97,59 +96,11 @@ footer img {
     margin-bottom: 30px;
 }
 
-#cards {
-    position: relative;
-}
-
-.card {
-    height: 100%;
-}
-
 .align-verical {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 300px;
-    perspective: 1000px;
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.flip-card-front {
-    background-color: #bbb;
-    color: black;
-}
-
-.flip-card-back {
-    background-color: #2980b9;
-    color: white;
-    transform: rotateY(180deg);
 }
 
 #intro {
@@ -158,6 +109,7 @@ footer img {
 
 .carousel-inner img {
     height: 100vh;
+    object-fit: cover;
 }
 
 .carousel-control-prev, .carousel-control-next, .carousel-indicators {
@@ -174,24 +126,191 @@ footer img {
     background-color: transparent;
 }
 
-#gallery .col-3 {
+#gallery .gallery-img {
     padding-left: 0 !important;
     padding-right: 0 !important;
     position: relative;
     overflow: hidden;
 }
 
-#gallery .col-3  img {
+#gallery .gallery-img img {
     max-width: 100%;
     -moz-transition: all 0.2s;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
 }
 
-#gallery .col-3  img:hover {
+#gallery .gallery-img img:hover {
     -webkit-transform: scale(1.3);
     transform: scale(1.3);
     cursor: pointer;
 }
 
+/*CARDS*/
 
+.card {
+    height: 100%;
+}
+
+.card-body {
+    position: relative;
+}
+
+.card-body img {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 0;
+    bottom: -20px;
+    opacity: 0.2;
+}
+
+.card-flipping-block {
+    background-color: transparent;
+    perspective: 1000px;
+    height: 25vw;
+    padding: 15px;
+}
+
+.card-flipping-in {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card-flipping-block:hover .card-flipping-in {
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+.card-flipping-front, .card-flipping-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 2px;
+}
+
+.card-flipping-back {
+    background-color: rgb(36, 196, 134);
+    padding: 15px;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 992px) {
+    .card-flipping-block {
+        height: 35vw;
+    }
+}
+
+/* TIME LINES */
+
+.timeline {
+    position: relative;
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    margin-left: -1px;
+    background-color: #242829;
+}
+
+.timeline-element {
+    position: relative;
+    width: 50%;
+    padding: 1rem 0;
+    padding-right: 2.5rem;
+    text-align: right;
+}
+
+.timeline-element::before {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 1.35rem;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #212121;
+    background-color: #fff;
+}
+
+.timeline-element:nth-child(even)::before {
+    right: auto;
+    left: -8px;
+}
+
+.timeline-element:nth-child(even) {
+    margin-left: 50%;
+    padding-left: 2.5rem;
+    padding-right: 0;
+    text-align: left;
+}
+
+@media (max-width: 767.98px) {
+    .timeline::before {
+        left: 8px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .timeline-element {
+        width: 100%;
+        text-align: left;
+        padding-left: 2.5rem;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .timeline-element::before {
+        top: 1.25rem;
+        left: 1px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .timeline-element:nth-child(even) {
+        margin-left: 0rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .timeline-element {
+        width: 100%;
+        text-align: left;
+        padding-left: 2.5rem;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .timeline-element:nth-child(even)::before {
+        left: 1px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .timeline-element::before {
+        top: 1.25rem;
+    }
+}
+
+#clients .row, section {
+    margin-top: 50px  !important;
+}
