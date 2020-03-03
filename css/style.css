@@ -209,6 +209,12 @@ footer img {
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .card-flipping-block {
+        height: 50vw;
+    }
+}
+
 /* TIME LINES */
 
 .timeline {
