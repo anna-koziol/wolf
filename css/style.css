@@ -16,7 +16,7 @@ html {
     scroll-behavior: smooth !important;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6, button {
     font-family: 'Montserrat', sans-serif !important;
 }
 
@@ -219,8 +219,12 @@ footer img {
     }
 }
 
-#clients .row, section {
+#clients .row {
     margin-top: 50px !important;
+}
+
+.padding {
+    padding-top: 100px !important;
 }
 
 .icons-footer {
@@ -242,7 +246,7 @@ iframe {
 
 #map {
     height: 100%;
-    width: 100%;  
+    width: 100%;
 }
 
 #map-parent {
@@ -251,4 +255,67 @@ iframe {
     width: 100vw;
     box-shadow: 0px 0px 20px -10px #1f2324;
     height: 50vh;
+}
+
+.gallery-grid {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%;
+}
+
+.gallery-grid .pics {
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+}
+
+.gallery-grid .animation {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+@media (max-width: 450px) {
+    .gallery-grid {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -webkit-column-width: 100%;
+        -moz-column-width: 100%;
+        column-width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .btn.filter {
+        padding-left: 1.1rem;
+        padding-right: 1.1rem;
+    }
+}
+
+button.close {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    padding-right: 1rem;
+    padding-top: .6rem;
+}
+
+#gallery-grid .btn {
+    padding: 10px;
+}
+
+#faq .card-header {
+    background-color: transparent;
+    border-bottom: 2px solid rgba(0,0,0,.1);
+}
+
+#faq #accordionEx, #faq .card {
+    box-shadow: 0px 0px 0px 0px #fff;
+}
+
+#faq .card i {
+    color: rgb(36, 196, 134);
 }
