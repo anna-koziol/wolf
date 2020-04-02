@@ -255,6 +255,12 @@ footer img {
     margin-top: 50px !important;
 }
 
+#clients img {
+    width: 50%;
+    margin-bottom: 20px;
+    filter: grayscale(100%);
+}
+
 .padding {
     padding-top: 100px !important;
 }
