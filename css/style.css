@@ -249,16 +249,15 @@ footer img {
     .card-flipping-back p {
         font-size: 0.75em;
     }
+    #clients img {
+        width: 40%;
+        /*margin-bottom: 20px; */
+    }
 }
 
 #clients .row {
     margin-top: 50px !important;
-}
-
-#clients img {
-    width: 50%;
-    margin-bottom: 20px;
-    filter: grayscale(100%);
+    justify-content: center;
 }
 
 .padding {
