@@ -91,6 +91,10 @@ h5 {
     letter-spacing: 3px;
 }
 
+header {
+background-color: #1f2324;
+}
+
 .hr-light {
     border-top: 3px solid #fff;
     width: 80px;
@@ -128,13 +132,18 @@ footer img {
 .carousel-control-prev,
 .carousel-control-next,
 .carousel-indicators {
-    z-index: 5 !important;
+    z-index: 6 !important;
 }
 
 .carousel .carousel-control-prev-icon,
 .carousel .carousel-control-next-icon {
     width: 35px;
     height: 35px;
+}
+
+#carousel-intro img {
+    filter: grayscale(1);
+    opacity: 0.4;
 }
 
 #gallery {
