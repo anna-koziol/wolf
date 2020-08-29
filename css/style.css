@@ -28,6 +28,10 @@ button {
     font-family: "Montserrat", sans-serif !important;
 }
 
+h1 {
+    font-size: 5rem !important;
+}
+
 *::selection {
     background: rgb(36, 196, 134);
 }
@@ -73,12 +77,6 @@ button {
     width: 100vw;
 }
 
-@media (max-width: 991px) {
-    .navbar:not(.top-nav-collapse) {
-        background: #212121 !important;
-    }
-}
-
 .top-nav-collapse {
     background-color: #212121 !important;
 }
@@ -89,6 +87,11 @@ h1 {
 
 h5 {
     letter-spacing: 3px;
+}
+
+#intro h5 {
+    letter-spacing: 5px;
+    font-size: 1.5rem;
 }
 
 header {
@@ -116,7 +119,6 @@ footer img {
 .align-verical {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
 
@@ -142,11 +144,10 @@ footer img {
 }
 
 #carousel-intro img {
-    filter: grayscale(1);
-    opacity: 0.4;
+    opacity: 0.75;
 }
 
-#gallery {
+#gallery  >  .row {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: transparent;
 }
@@ -163,7 +164,6 @@ footer img {
     -moz-transition: all 0.2s;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
-    filter: grayscale(100%);
 }
 
 #gallery .gallery-img img:hover {
@@ -262,7 +262,60 @@ footer img {
         width: 40%;
         /*margin-bottom: 20px; */
     }
+
+    #about-me img  {
+        margin: auto;
+        margin-bottom: 100px;
+    }
+
+    #cooperation img {
+        margin: auto;
+    }
+
 }
+
+@media only screen and (min-width: 768px) {
+    #cooperation img {
+        max-width: 100% !important;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .gallery-grid {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -webkit-column-width: 100%;
+        -moz-column-width: 100%;
+        column-width: 100%;
+    }
+
+    h1 {
+        font-size: 3.5rem !important;
+    }
+
+    #intro h5 {
+        letter-spacing: 4px;
+        font-size: 1.3rem;
+    }
+    
+
+}
+
+@media (max-width: 400px) {
+    .btn.filter {
+        padding-left: 1.1rem;
+        padding-right: 1.1rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar:not(.top-nav-collapse) {
+        background: #212121 !important;
+    }
+}
+
 
 #clients .row {
     margin-top: 50px !important;
@@ -282,12 +335,19 @@ footer img {
 iframe {
     width: 66vw;
     height: 37.1vw;
+    padding-top: 50px;
 }
 
 #cooperation img {
     border: 1px solid rgb(36, 196, 134);
-    border-radius: 100%;
+    border-radius: 80%;
     box-shadow: inset 0 0 5px #1f2324;
+    max-width: 80%;
+    height: auto;
+}
+
+#wolf .align-verical {
+    align-items: center
 }
 
 #map {
@@ -328,24 +388,6 @@ iframe {
     margin: 0;
 }
 
-@media (max-width: 450px) {
-    .gallery-grid {
-        -webkit-column-count: 1;
-        -moz-column-count: 1;
-        column-count: 1;
-        -webkit-column-width: 100%;
-        -moz-column-width: 100%;
-        column-width: 100%;
-    }
-}
-
-@media (max-width: 400px) {
-    .btn.filter {
-        padding-left: 1.1rem;
-        padding-right: 1.1rem;
-    }
-}
-
 button.close {
     position: absolute;
     right: 0;
@@ -370,4 +412,13 @@ button.close {
 
 #faq .card i {
     color: rgb(36, 196, 134);
+}
+
+#about-me img {
+    max-width: 80%;
+    padding: 10px;
+    border: 1px solid rgb(231, 227, 227);
+    filter: grayscale(1);
+    border-radius: 5px;
+    padding-bottom: 0;
 }
