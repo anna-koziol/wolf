@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       iconSize: [54, 54]
     });
 
-    var map = L.map('map').setView([50.072358, 19.901357], 15);
+    var map = L.map('map').setView([50.050929, 19.967731], 15);
     L.tileLayer(
       "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
       {
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       }
     ).addTo(map);
 
-    L.marker([50.072358, 19.901357], {
+    L.marker([50.050929, 19.967731], {
       title: "Marker",
       icon: icon
     }).addTo(map);

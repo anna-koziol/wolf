@@ -6,6 +6,8 @@ body {
     overflow-x: hidden !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
     background: #fff;
     padding-right: 0 !important;
     font-family: "Trebuchet MS Regular", sans-serif;
@@ -94,8 +96,13 @@ h5 {
     font-size: 1.5rem;
 }
 
+#intro a {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    text-shadow: 0 0 1px #ffffffbe;
+}
+
 header {
-background-color: #1f2324;
+    background-color: #1f2324;
 }
 
 .hr-light {
@@ -144,10 +151,10 @@ footer img {
 }
 
 #carousel-intro img {
-    opacity: 0.75;
+    opacity: 0.5;
 }
 
-#gallery  >  .row {
+#gallery>.row {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: transparent;
 }
@@ -262,16 +269,13 @@ footer img {
         width: 40%;
         /*margin-bottom: 20px; */
     }
-
-    #about-me img  {
+    #about-me img {
         margin: auto;
         margin-bottom: 100px;
     }
-
     #cooperation img {
         margin: auto;
     }
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -279,7 +283,6 @@ footer img {
         max-width: 100% !important;
     }
 }
-
 
 @media (max-width: 450px) {
     .gallery-grid {
@@ -290,17 +293,13 @@ footer img {
         -moz-column-width: 100%;
         column-width: 100%;
     }
-
     h1 {
         font-size: 3.5rem !important;
     }
-
     #intro h5 {
         letter-spacing: 4px;
         font-size: 1.3rem;
     }
-    
-
 }
 
 @media (max-width: 400px) {
@@ -315,7 +314,6 @@ footer img {
         background: #212121 !important;
     }
 }
-
 
 #clients .row {
     margin-top: 50px !important;
@@ -339,8 +337,6 @@ iframe {
 }
 
 #cooperation img {
-    border: 1px solid rgb(36, 196, 134);
-    border-radius: 80%;
     box-shadow: inset 0 0 5px #1f2324;
     max-width: 80%;
     height: auto;
@@ -348,6 +344,10 @@ iframe {
 
 #wolf .align-verical {
     align-items: center
+}
+
+#wolf ul {
+    list-style-type: none;
 }
 
 #map {
@@ -414,10 +414,9 @@ button.close {
     color: rgb(36, 196, 134);
 }
 
-#about-me img {
-    max-width: 80%;
-    padding: 10px;
-    border: 1px solid rgb(231, 227, 227);
+#about-me img,
+#cooperation img {
+    max-width: 100%;
     filter: grayscale(1);
     border-radius: 5px;
     padding-bottom: 0;
